@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Grid } from '@chakra-ui/react';
 
 import Movies from '../views/Movies';
+import Users from '../views/Users';
 
 const Content = () => {
   return (
@@ -21,13 +22,10 @@ const Content = () => {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/movies">Movies</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/users">Users</Link>
+                <Link to="/users">User Rentals</Link>
               </li>
             </ul>
           </nav>
@@ -36,9 +34,9 @@ const Content = () => {
             <Route path="/movies">
               <Movies />
             </Route>
-            {/* <Route path="/rentals">
+            <Route path="/users">
               <Users />
-            </Route> */}
+            </Route>
             {/* <Route path="/">
               <Home />
             </Route> */}
