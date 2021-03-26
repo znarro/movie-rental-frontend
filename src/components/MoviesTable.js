@@ -2,9 +2,8 @@ import React from 'react';
 import { Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
 
 const MoviesTable = ({ movies }) => {
-  console.log(movies);
   return (
-    <Table variant="simple" gridArea="table">
+    <Table size="md" variant="simple" gridArea="table">
       <Thead>
         <Tr>
           <Th>Id</Th>

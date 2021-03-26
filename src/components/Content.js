@@ -5,7 +5,7 @@ import {
   Route,
   Link as RouterLink,
 } from 'react-router-dom';
-import { Grid, HStack, Divider, Link } from '@chakra-ui/react';
+import { Grid, Container, HStack, Divider, Link } from '@chakra-ui/react';
 
 import Movies from '../views/Movies';
 import Users from '../views/Users';
@@ -24,7 +24,7 @@ const Content = () => {
       gap={5}
     >
       <Router>
-        <div>
+        <Container maxW="5xl">
           <nav>
             <HStack height="50px">
               <Link as={RouterLink} color="blue.500" to="/movies">
@@ -43,7 +43,7 @@ const Content = () => {
             <Route exact path="/users/:id" children={<User />} />
             <Route exact path="/" children={<Movies />} />
           </Switch>
-        </div>
+        </Container>
       </Router>
     </Grid>
   );
