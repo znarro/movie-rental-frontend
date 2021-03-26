@@ -2,7 +2,7 @@
 
 ### `Live Site`
 
-Run the React app in the following [link](https://nifty-ptolemy-f5551e.netlify.app/users)
+Run the React app in the following [link](https://nifty-ptolemy-f5551e.netlify.app/)
 
 ### `API Documentation and URL`
 
