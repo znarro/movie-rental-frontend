@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Table, Thead, Tbody, Tr, Th, Td, Checkbox } from '@chakra-ui/react';
 
 const RentalsTable = ({ rentals }) => {
-  const [rented, setIsRented] = useState(true);
+  // const [rented, setIsRented] = useState(true);
   // const [userId, setUserId] = useState(0);
   // const [rentalId, setRentalId] = useState(0);
 
@@ -60,11 +60,11 @@ const RentalsTable = ({ rentals }) => {
               <Td>
                 <Checkbox
                   defaultIsChecked
-                  onChange={e => {
-                    // setUserId(rental.user.id);
-                    // setRentalId(rental.id);
-                    setIsRented(e.target.checked);
-                  }}
+                  // onChange={e => {
+                  //   // setUserId(rental.user.id);
+                  //   // setRentalId(rental.id);
+                  //   setIsRented(e.target.checked);
+                  // }}
                 />
               </Td>
             </Tr>
