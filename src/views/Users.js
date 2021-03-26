@@ -12,7 +12,6 @@ const Users = () => {
     async function fetchData() {
       const response = await fetch(`${BASE_URL}/users`);
       const data = await response.json();
-      console.log(data);
       setUsers(data);
     }
     fetchData();

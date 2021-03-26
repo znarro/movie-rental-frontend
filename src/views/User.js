@@ -8,7 +8,6 @@ const UserRentals = () => {
   let { id } = useParams();
 
   const [currentUserRentals, setCurrentUserRentals] = useState([]);
-  //   const [currentUser, setCurrentUser] = useState('');
 
   useEffect(() => {
     const BASE_URL = 'https://afternoon-brushlands-40101.herokuapp.com/api';
@@ -17,8 +16,6 @@ const UserRentals = () => {
       const response = await fetch(`${BASE_URL}/users/${id}/rentals`);
       const data = await response.json();
       setCurrentUserRentals(data);
-      console.log(data);
-      //   setCurrentUser(data[0].user.name);
     }
     fetchData();
   }, [id]);

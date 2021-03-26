@@ -12,7 +12,6 @@ const Movies = () => {
     async function fetchData() {
       const response = await fetch(`${BASE_URL}/movies`);
       const data = await response.json();
-      console.log(data);
       setMovies(data);
     }
     fetchData();
