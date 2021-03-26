@@ -1,9 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { Grid } from '@chakra-ui/react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link as RouterLink,
+} from 'react-router-dom';
+import { Grid, HStack, Divider, Link } from '@chakra-ui/react';
 
 import Movies from '../views/Movies';
 import Users from '../views/Users';
+import User from '../views/User';
 
 const Content = () => {
   return (
@@ -20,26 +26,22 @@ const Content = () => {
       <Router>
         <div>
           <nav>
-            <ul>
-              <li>
-                <Link to="/movies">Movies</Link>
-              </li>
-              <li>
-                <Link to="/users">User Rentals</Link>
-              </li>
-            </ul>
+            <HStack height="50px">
+              <Link as={RouterLink} color="blue.500" to="/movies">
+                Movies
+              </Link>
+              <Divider orientation="vertical" />
+              <Link as={RouterLink} color="blue.500" to="/users">
+                User Rentals
+              </Link>
+            </HStack>
           </nav>
 
           <Switch>
-            <Route path="/movies">
-              <Movies />
-            </Route>
-            <Route path="/users">
-              <Users />
-            </Route>
-            {/* <Route path="/">
-              <Home />
-            </Route> */}
+            <Route exact path="/movies" children={<Movies />} />
+            <Route exact path="/users" children={<Users />} />
+            <Route exact path="/users/:id" children={<User />} />
+            <Route exact path="/" children={<Movies />} />
           </Switch>
         </div>
       </Router>

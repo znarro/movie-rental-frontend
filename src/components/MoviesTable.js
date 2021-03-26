@@ -2,6 +2,7 @@ import React from 'react';
 import { Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
 
 const MoviesTable = ({ movies }) => {
+  console.log(movies);
   return (
     <Table variant="simple" gridArea="table">
       <Thead>
@@ -9,7 +10,7 @@ const MoviesTable = ({ movies }) => {
           <Th>Id</Th>
           <Th>Title</Th>
           <Th>Director</Th>
-          {/* <Th>Rented by</Th> */}
+          <Th>Is available?</Th>
         </Tr>
       </Thead>
       <Tbody>
@@ -19,7 +20,7 @@ const MoviesTable = ({ movies }) => {
               <Td>{movie.id}</Td>
               <Td>{movie.name}</Td>
               <Td>{movie.director}</Td>
-              {/* <Td>{rented}</Td> */}
+              <Td>{movie.user ? 'No :(' : 'Yes!'}</Td>
             </Tr>
           );
         })}

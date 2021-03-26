@@ -7,8 +7,7 @@ const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const BASE_URL = 'http://localhost:3000/api';
-    // const BASE_URL = 'https://afternoon-brushlands-40101.herokuapp.com/api';
+    const BASE_URL = 'https://afternoon-brushlands-40101.herokuapp.com/api';
 
     async function fetchData() {
       const response = await fetch(`${BASE_URL}/users`);
